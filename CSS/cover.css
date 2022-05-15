@@ -155,9 +155,10 @@ body {
     color: #ffffff;
 }
 
-/* remove cover*/
+/* remove cover */
+/* Fade Out */
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 1s, opacity 1s linear;
+  transition: visibility 0s 1.2s, opacity 1.2s linear;
 }

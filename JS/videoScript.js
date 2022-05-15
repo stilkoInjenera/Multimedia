@@ -6,6 +6,7 @@ var video3 = document.getElementById("myVideo3");
 var bt1 = document.getElementById("bt1");
 var bt2 = document.getElementById("bt2");
 var bt3 = document.getElementById("bt3");
+var activeVideo=video1;
 
 // Options for the observer (which mutations to observe)
 const config = { attributes: true, childList: true, subtree: true };
@@ -27,6 +28,7 @@ function LoadVideo(video) {
   if (video.paused) {
     video.play();
   }
+  activeVideo=video;
 }
 function StopVideo(video) {
   if (!video.paused) {
@@ -57,6 +59,41 @@ function ChangeVideos(active, btnId){
     case "bt3":StopVideo(video3);return;
   }
 }
+
+document.addEventListener("keyup", (e) => {
+  if(carousel.style.visibility=="visible"){
+    let lastPressed=String(e.key);
+    console.log(lastPressed);
+    if(lastPressed==" "){
+      pauseVideo(activeVideo);
+      return;
+    }
+    if(lastPressed=="a"){
+      activeVideo.currentTime-=10;
+      return;
+    }
+    if(lastPressed=="d"){
+      activeVideo.currentTime+=10;
+      return;
+    }
+    if(lastPressed=="s"){
+      activeVideo.volume-=0.1;
+      return;
+    }
+    if(lastPressed=="w"){
+      activeVideo.volume+=0.1;
+      return;
+    }
+    if(lastPressed=="m"){
+      if(activeVideo.volume==0){
+        activeVideo.volume=1;
+        return;
+      }
+      activeVideo.volume=0;
+      return;
+    }
+  }
+});
 
 // Callback function to execute when mutations are observed
 const callback = function(mutationsList, observer) {
