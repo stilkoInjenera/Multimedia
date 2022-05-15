@@ -15,6 +15,7 @@ function sleep(ms) {
 }
 
 //when the site loads
+video1.pause();
 video2.pause();
 video2.currentTime=0;
 video3.pause();
