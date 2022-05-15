@@ -9,7 +9,10 @@ var bt3 = document.getElementById("bt3");
 
 // Options for the observer (which mutations to observe)
 const config = { attributes: true, childList: true, subtree: true };
-
+//function to delay the stop of videos
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //when the site loads
 video2.pause();
@@ -25,7 +28,6 @@ function LoadVideo(video) {
   }
 }
 function StopVideo(video) {
-  video.currentTime = 0;
   if (!video.paused) {
     video.pause();
   }
