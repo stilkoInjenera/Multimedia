@@ -5,3 +5,14 @@ video{
   max-width: 100%;
   max-width: 100%;
 }
+
+.darkText{
+ color: rgb(41, 41, 41);
+ border: 0.5px;
+border-color:white ;
+}
+.lightText{
+color: rgb(255, 255, 255);
+border: 0.5px;
+border-color:black ;
+}
