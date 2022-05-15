@@ -9,30 +9,8 @@
     <link href="CSS/cover.css" rel="stylesheet">
   </head>
   <body>
-
-    <div id="cover" class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="container">
-
-          <div class="masthead clearfix">
-            <div class="container inner">
-              <a href="https://pmgbs.com/"><h3 class="masthead-brand">PMG</h3></a>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Cover</h1>
-            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quod non laboriosam, in eos maiores, dolor, praesentium libero modi nam voluptates labore. Corrupti, corporis cumque placeat porro impedit laudantium amet!</p>
-            <p class="lead">
-              <a onclick="ActivatePlayer()" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div id="carouselExampleCaptions" style="display: none;" class="carousel slide" data-bs-ride="false">
+    <div style="position: relative;">
+    <div id="carouselExampleCaptions" style="visibility: hidden;" class="carousel slide" data-bs-ride="false">
       <div class="carousel-indicators">
         <button type="button" id="bt1" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" id="bt2" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -75,6 +53,28 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+    </div>
+    <div id="cover" style="position: absolute;top:0px" class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="container">
+
+          <div class="masthead clearfix">
+            <div class="container inner">
+              <a href="https://pmgbs.com/"><h3 class="masthead-brand">PMG</h3></a>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Cover</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quod non laboriosam, in eos maiores, dolor, praesentium libero modi nam voluptates labore. Corrupti, corporis cumque placeat porro impedit laudantium amet!</p>
+            <p class="lead">
+              <a onclick="ActivatePlayer()" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
       <script src="JS/videoScript.js"></script>
