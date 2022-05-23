@@ -26,7 +26,9 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
   background-color: rgb(31, 31, 31);
 }
 body {
@@ -38,14 +40,17 @@ body {
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../IMG/pmg.jpg);;
   background-position: center;
+  background-origin: border;
+  background-origin: content-box;
+  background-clip: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
   /*height: 100%; */
-  min-height: 100%;
+  max-height: 100%;
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -161,4 +166,8 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 1.2s, opacity 1.2s linear;
+} 
+.cover_IMG{
+  height: 100%   !important;
+  width: auto !important;
 }

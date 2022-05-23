@@ -1,18 +1,26 @@
 /* Style the video: 100% width and height to cover the entire window */
 video{
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  max-width: 100%;
+  /* override other styles to make responsive */
+  max-height: 100vh;
+  max-width: 100vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#carouselExampleCaptions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .darkText{
- color: rgb(41, 41, 41);
- border: 0.5px;
-border-color:white ;
+  color: rgb(41, 41, 41);
+  border: 0.5px;
+  border-color:white ;
 }
 .lightText{
-color: rgb(255, 255, 255);
-border: 0.5px;
-border-color:black ;
+  color: rgb(255, 255, 255);
+  border: 0.5px;
+  border-color:black ;
 }
