@@ -32,10 +32,46 @@ body {
   background-color: rgb(31, 31, 31);
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: rgb(31, 31, 31);
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
+
+#content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+#carouselExampleCaptions{
+  margin: auto;
+}
+#content {
+  margin: auto;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+
+/* #cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+#container-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#inner-text {
+  margin: auto;
+}
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -140,16 +176,13 @@ body {
  */
 
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
   .masthead {
     position: fixed;
     top: 0;
   }
-  /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
   }
-
 }
 
 /* text style*/
